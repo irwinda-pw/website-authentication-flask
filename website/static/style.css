@@ -1,0 +1,10 @@
+body {
+   height: 100%;
+}
+.form-signin {
+   max-width: 400px;
+   padding: 1rem;
+}
+.show-message {
+   display: block;
+}

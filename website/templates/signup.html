@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<main class="form-signin w-100 m-auto">
+   <form method="POST" id="form" class="p-4 bg-body-tertiary needs-validation">
+      <h1 class="h1 mb-4 fw-normal" align="center">Sign Me Up</h1>
+      
+      <div class="input-group mb-3">
+         <div class="form-floating">
+            <input type="name" class="form-control" id="username" name="username" placeholder="enter_username" required>
+            <label for="username">Username*</label>
+         </div>
+         <div class="invalid-feedback">Error Message</div>
+      </div>
+      
+
+      <div class="input-group mb-3">
+         <div class="form-floating">
+            <input type="email" class="form-control" id="email" name="email" placeholder="email_address@mail.com" required>
+            <label for="email">Email Address*</label>
+         </div>
+         <div class="invalid-feedback">Error Message</div>
+      </div>
+      
+      <div class="input-group mb-3">
+         <div class="form-floating">
+            <input type="password" class="form-control" id="password" name="password" placeholder="enter-password" required>
+            <label for="password">Password*</label>
+         </div>
+         <span class="input-group-text">
+            <i class="fa fa-eye-slash" onclick="togglePassword(event)" aria-hidden="true"></i>
+         </span>
+         <div class="invalid-feedback">Error Message</div>
+      </div>
+      
+      <div class="input-group mb-3">
+         <div class="form-floating">
+            <input type="password" class="form-control" id="password-retype" name="password-retype" placeholder="enter-password" required>
+            <label for="password-retype">Confirm Password*</label>
+         </div>
+         <span class="input-group-text">
+            <i class="fa fa-eye-slash" onclick="togglePassword(event)" aria-hidden="true"></i>
+         </span>
+         <div class="invalid-feedback">Error Message</div>
+      </div>
+
+      <button class="btn btn-primary w-100 mt-3 py-2" type="submit">SUBMIT</button>
+   </form>
+   <p class="mt-4 text-body-secondary" align="center">&copy; 2017–2024</p>
+</main>
+{% endblock %}
